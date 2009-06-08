@@ -39,13 +39,14 @@ if( $http->hasPostVariable( 'SelectedCollection' ) )
 	
 	$export->getCollectionsData($selectedCollection, $options);
 	
+	$objectName = strtolower(eZURLALiasML::convertToAlias( $objectName ));
+	
 	/*
 	 * Generate XML from collections & output file
 	 */
 	$xml = new OkapiXML( $objectName, array( 'debug' => false ) );
 	$xml->fromArray( $export->collectionsData );
-	
-	$objectName = urlencode ($objectName);
+			
 	$filename = $objectName.'.xml';
 	$headers = array ('Content-type: application/octet-stream',
 					  'Content-Disposition: attachment; filename='.$filename);
