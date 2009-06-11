@@ -25,15 +25,9 @@ if( $http->hasPostVariable( 'SelectedCollection' ) )
 		$rangeFrom = $http->postVariable( 'exportFrom');
 		$rangeTo = $http->postVariable( 'exportTo');	
 	}
-	elseif( $http->postVariable( 'lastExport') == 'true')
+	else 
 	{
 		$rangeFrom = $export->getPointer( $selectedCollection );
-		$rangeTo = time();
-		$export->setPointer( $selectedCollection , $rangeTo);	
-	}	
-	elseif( $http->postVariable( 'fullExport') == 'true') 
-	{
-		$rangeFrom = 0;
 		$rangeTo = time();
 		$export->setPointer( $selectedCollection , $rangeTo);
 	}

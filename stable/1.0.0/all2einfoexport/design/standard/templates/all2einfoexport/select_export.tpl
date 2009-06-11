@@ -73,11 +73,7 @@
             	<table class="list" cellspacing="0">
 		<tbody>
 		<tr class="bglight">
-			<td><input type="radio" name="fullExport" value="true"></td>
-			<td colspan="2">Export all collections</td>
-		</tr>		
-		<tr class="bglight">
-			<td><input type="radio" name="lastExport" value="true"></td>
+			<td><input type="radio" name="Range" value="false"></td>
 			<td colspan="2">Export collections since last export</td>
 		</tr>				
 		<tr class="bglight">
