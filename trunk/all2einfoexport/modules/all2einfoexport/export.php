@@ -35,7 +35,6 @@ if( $http->hasPostVariable( 'SelectedCollection' ) )
 	{
 		$rangeFrom = 0;
 		$rangeTo = time();
-		$export->setPointer( $selectedCollection , $rangeTo);
 	}
 					
 	$options = array ( 'objectname' => $objectName, 
